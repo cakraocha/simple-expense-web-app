@@ -1,3 +1,4 @@
+import React from "react";
 import Expenses from "./components/Expenses";
 
 function App() {
@@ -34,6 +35,19 @@ function App() {
       <Expenses items={expenses}/>
     </div>
   );
+
+  // React working under the hood
+  // in the background, react is always imported
+  // but, because we are using jsx, things get simpler
+  // below is the code if we use normal React
+
+  // import React from "react";
+  // return React.createElement(
+  //   'div', // first element
+  //   {}, // no properties for div wrapper
+  //   React.createElement('h2', {}, 'Hello World!'), // second element
+  //   React.createElement(Expenses, { items: expenses }) // third element
+  // );
 }
 
 export default App;
