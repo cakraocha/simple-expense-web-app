@@ -1,7 +1,8 @@
 import React from "react";
 import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
+  // Alternative to use this is function() { return <Expenses /> }
   const expenses = [
     {
       id: "e1",
@@ -32,7 +33,7 @@ function App() {
   return (
     <div>
       <h2>Hello World!</h2>
-      <Expenses items={expenses}/>
+      <Expenses items={expenses} />
     </div>
   );
 
@@ -48,6 +49,6 @@ function App() {
   //   React.createElement('h2', {}, 'Hello World!'), // second element
   //   React.createElement(Expenses, { items: expenses }) // third element
   // );
-}
+};
 
 export default App;
